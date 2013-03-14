@@ -19,15 +19,15 @@
     'release'
 ].forEach (gesture) ->
     ko.bindingHandlers["hm#{gesture[0].toUpperCase()}#{gesture[1..-1].toLowerCase()}"] = 
-        init: (element, valueAccessor, allBindingsAccessor, viewModel) ->
+        init: (element, valueAccessor, allBindingsAccessor, data) ->
             return false unless valueAccessor() 
 
             options = allBindingsAccessor().hmOptions or {}
-            handler = valueAccessor().bind viewModel
-            hammer = Hammer element, options
+            handler = valueAccessor().bind data
+            data.hammer ?= Hammer element, options
 
-            hammer.on gesture, handler
+            data.hammer.on gesture, handler
             
             ko.utils.domNodeDisposal.addDisposeCallback element, () ->
-                hammer.off gesture, handler
+                data.hammer.off gesture, handler
             true
