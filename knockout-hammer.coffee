@@ -3,6 +3,7 @@
 * knockout (https://github.com/SteveSanderson/knockout)
 * hammer.js (https://github.com/EightMedia/hammer.js)
 * Usage: data-bind="hmHold: holdHandlerFn, hmOptions: { hold_timeout: 400 }"
+* http://jsfiddle.net/9AA7U/1/
 ###
 
 [
