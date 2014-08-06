@@ -3,13 +3,14 @@ knockout-hammer
 
 Knockout custom bindings for Hammer.js multi-touch gestures library
 
-knockout (https://github.com/SteveSanderson/knockout)
-hammer.js (https://github.com/EightMedia/hammer.js)
+* knockout (https://github.com/knockout/knockout)
+* hammer.js (https://github.com/hammerjs/hammer.js)
+
 
 Usage:
+-
 data-bind="hmHold: holdHandlerFn, hmOptions: { hold_timeout: 400 }"
 
-http://jsfiddle.net/9AA7U/1/
-
-TODO: ?? Use jQuery hammer.js plugin for IE support
-TODO: ?? Refactor to -> data-bind="hmEvent: { hold: holdHandlerFn }, hmOptions: { hold_timeout: 400 }"
+Notes:
+-
+Tested with knockout v3.1.0 and hammer.js v2.0.2.
