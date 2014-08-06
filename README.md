@@ -9,7 +9,7 @@ Knockout custom bindings for Hammer.js multi-touch gestures library
 
 Usage:
 -
-data-bind="hmHold: holdHandlerFn, hmOptions: { hold_timeout: 400 }"
+data-bind="hmHold: holdHandlerFn, hmOptions: { recognizers: [ [Hammer.Press, {time:5000}] ] }
 
 Notes:
 -
