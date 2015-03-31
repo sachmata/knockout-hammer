@@ -62,7 +62,7 @@
 				}
 
 				options = valueAccessor().hmOptions || {};
-				handler = valueAccessor().bind(bindingContext);
+				handler = valueAccessor().bind(bindingContext.$data);
 
 				hammer.on(eventName, function (event) {
 					//Like default knockout return the data as the first parameter and the event data as the second.
